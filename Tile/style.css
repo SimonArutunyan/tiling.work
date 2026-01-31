@@ -1,0 +1,335 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://d2bnvhcdayi5wl.cloudfront.net/uploads/cache/imagesroom_scenesnoneoriginalalustra_hdp_backsplash_ftialu20p_4x6arch_imperial_gold_calacatta_polished_1vjpg_slider.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  color: #ede7e7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header and navigation */
+header {
+  background-color: rgba(229, 225, 221, 0.9);
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #2980b9;
+  color: rgb(227, 216, 216);
+}
+
+/* Main content */
+main {
+  flex: 1;
+  max-width: 1000px;
+  margin: 30px auto;
+  background-color: white(213, 209, 209, 0.9);
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Hero sections */
+.hero, .services-hero, .contact-hero {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero h1, .services-hero h1, .contact-hero h1 {
+  font-size: 2.8rem;
+  color: #111213;
+  margin-bottom: 12px;
+}
+
+.hero p, .services-hero p, .contact-hero p {
+  font-size: 1.2rem;
+  color: #1d1f1f;
+}
+
+.hero img {
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Intro text */
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.intro p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Tiles container */
+.tiles-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.tile {
+  background-color: rgb(182, 173, 173);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+}
+
+.tile img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.tile h2 {
+  color: #2980b9;
+  margin-bottom: 10px;
+}
+
+.tile p {
+  color: #e6dada;
+  font-size: 1rem;
+}
+
+/* Contact info */
+.contact-info p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.contact-info a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Contact form */
+.contact-form {
+  margin-top: 30px;
+}
+
+.contact-form h2 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.contact-form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  color: #34495e;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #2980b9;
+  color: rgb(222, 223, 212);
+  border: none;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #1c5980;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(180, 183, 173, 0.9);
+  text-align: center;
+  padding: 18px 20px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+footer p {
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+footer a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer button {
+  background-color: #075d26;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+footer button:hover {
+  background-color: #1e8449;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tiles-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Анимация плавного появления */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Анимация пульсации кнопки */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(39, 174, 96, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(39, 174, 96, 0.9);
+  }
+}
+
+/* Анимация плавного появления для заголовков и параграфов */
+.hero h1, .services-hero h1, .contact-hero h1,
+.intro h2, .contact-form h2, .tile h2 {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+/* Задержка для параграфов */
+.hero p, .services-hero p, .contact-hero p,
+.intro p, .tile p, .contact-info p {
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+/* Плавное появление изображений */
+.hero img, .tile img {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.6s;
+}
+
+/* Анимация плиток при наведении */
+.tile:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Пульсирующая кнопка в футере */
+footer button#emailBtn {
+  animation: pulse 2.5s infinite;
+}
+
+/* Навигация - плавное изменение цвета при наведении */
+nav ul li a {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* При загрузке страницы элементы плавно появляются */
+body.loaded .hero h1,
+body.loaded .hero p,
+body.loaded .hero img,
+body.loaded .intro h2,
+body.loaded .intro p,
+body.loaded .tile h2,
+body.loaded .tile p,
+body.loaded .tile img,
+body.loaded .services-hero h1,
+body.loaded .services-hero p,
+body.loaded .contact-hero h1,
+body.loaded .contact-hero p,
+body.loaded .contact-form h2,
+body.loaded .contact-info p {
+  opacity: 1;
+  transform: translateY(0);
+  animation-play-state: running;
+}
