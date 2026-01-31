@@ -28,14 +28,70 @@
       <h2>Get in Touch</h2>
       <p><strong>Phone:</strong> <a href="tel:+18188556057">+1 (818) 855 6057</a></p>
       <p><strong>Email:</strong> <a href="mailto:karu6933@gmail.com">karu6933@gmail.com</a></p>
+      <p><strong>Address:</strong> 8112 Ben Ave  North Hollywood, CA 91605</p> <!-- Добавлен адрес -->
+    </section>
+
+    <!-- Форма обратной связи -->
+    <section class="contact-form">
+      <h2>Send us a message</h2>
+      <form id="contactForm">
+        <label for="name">Your Name:</label><br />
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label for="phone">Your Phone Number:</label><br />
+        <input type="tel" id="phone" name="phone" required pattern="[\d\s()+-]{7,}" placeholder="+1 (555) 123-4567" /><br /><br />
+
+        <label for="message">Your Message:</label><br />
+        <textarea id="message" name="message" rows="5" required></textarea><br /><br />
+
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="formStatus"></p> <!-- Для вывода статуса отправки -->
     </section>
   </main>
 
   <footer>
-    <p>Call us now: <a href="tel:+1234567890">+1 (818) 855 6057</a></p>
-    <a href="mailto:Karu6933@gmail.com" class="email-button">Contact via Email</a>
+    <p>Call us now: <a href="tel:+18188556057">+1 (818) 855 6057</a></p>
+    <a href="mailto:karu6933@gmail.com" class="email-button">Contact via Email</a>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Обработка отправки формы
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Отменяем стандартную отправку формы
+
+      const formStatus = document.getElementById('formStatus');
+      formStatus.textContent = 'Sending...';
+
+      // Получаем значения из формы
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      // Формируем объект с данными
+      const data = { name, phone, message };
+
+      // Отправляем POST-запрос на сервер (замените URL на ваш endpoint)
+      fetch('https://your-server.com/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => {
+        if (response.ok) {
+          formStatus.textContent = 'Message sent successfully!';
+          document.getElementById('contactForm').reset();
+        } else {
+          throw new Error('Failed to send message');
+        }
+      })
+      .catch(error => {
+        formStatus.textContent = 'Error sending message. Please try again later.';
+        console.error(error);
+      });
+    });
+  </script>
 </body>
 </html>
